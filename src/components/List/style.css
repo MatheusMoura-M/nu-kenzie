@@ -1,6 +1,7 @@
 .list {
   display: flex;
   flex-direction: column;
+  min-width: 400px;
 }
 
 .header_list {
@@ -44,4 +45,15 @@
   padding: 15px;
   width: 83%;
   margin: 0 auto;
+  border-radius: 0.4rem;
+}
+
+.btn_filtro .btn-color {
+  background: var(--color-primary);
+}
+
+@media (min-width: 1000px) {
+  .list {
+    margin: 75px 0 0 0;
+  }
 }

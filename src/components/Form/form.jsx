@@ -1,38 +1,70 @@
+import { useState } from "react";
+import { TotalMoney } from "../TotalMoney/money";
 import "./style.css";
+import { v4 as uuidv4 } from "uuid";
 
 export const Form = ({ listTransactions, setListTransactions }) => {
+  const [inputDescription, SetInputDescription] = useState("");
+  const [inputValue, SetInputValue] = useState("");
+  const [selectTipo, SetSelectTipo] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setListTransactions([
+      ...listTransactions,
+      {
+        id: uuidv4(),
+        description: inputDescription,
+        type: selectTipo,
+        value: inputValue,
+      },
+    ]);
+  };
+
   return (
     <section className="section_form">
-      <form className="form">
+      <form onSubmit={handleSubmit} className="form">
         <div className="label-description">
-          <input type="text" id="inputDescription" placeholder=" " />
+          <input
+            type="text"
+            id="inputDescription"
+            placeholder=" "
+            onChange={(event) => {
+              SetInputDescription(event.target.value);
+            }}
+          />
           <label className="labelDescription">Descrição:</label>
           <span>Ex: Compra de roupas</span>
         </div>
         <div className="box-inputValue">
           <div className="label-value">
-            <input type="text" placeholder=" " />
+            <input
+              type="number"
+              placeholder=" "
+              onChange={(event) => {
+                SetInputValue(+event.target.value);
+              }}
+            />
             <label>Valor:</label>
             <p>R$</p>
           </div>
           <div className="box-select">
             <h3>Tipo de valor:</h3>
-            <select>
+            <select
+              onChange={(event) => {
+                SetSelectTipo(event.target.value);
+              }}
+            >
               <option value=""></option>
               <option value="Entrada">Entrada</option>
-              <option value="Despesas">Despesas</option>
+              <option value="Despesa">Despesa</option>
             </select>
           </div>
         </div>
-        <button type="button">Inserir valor</button>
+        <button type="submit">Inserir valor</button>
       </form>
-      <div className="amount">
-        <div>
-          <h2>Valor total:</h2>
-          <p>R$</p>
-        </div>
-        <span>O valor se refere ao saldo</span>
-      </div>
+      <TotalMoney listTransactions={listTransactions} />
     </section>
   );
 };

@@ -7,8 +7,13 @@ import { LandingPage } from "./components/LandingPage/landing";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "Entrada", value: 2500 },
-    { description: "Conta de luz", type: "Saída", value: -150 },
+    {
+      id: 22,
+      description: "Salário recebido",
+      type: "Entrada",
+      value: 2500,
+    },
+    { id: 1, description: "Conta de luz", type: "Despesa", value: -150 },
   ]);
 
   return (

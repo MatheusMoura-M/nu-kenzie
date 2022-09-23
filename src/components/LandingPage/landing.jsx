@@ -19,11 +19,16 @@ export const LandingPage = ({
         </h2>
         <button onClick={Logout}>Iniciar</button>
       </header>
-      <Form
-        listTransactions={listTransactions}
-        setListTransactions={setListTransactions}
-      />
-      <List listTransactions={listTransactions} />
+      <main>
+        <Form
+          listTransactions={listTransactions}
+          setListTransactions={setListTransactions}
+        />
+        <List
+          listTransactions={listTransactions}
+          setListTransactions={setListTransactions}
+        />
+      </main>
     </>
   );
 };

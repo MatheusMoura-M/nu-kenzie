@@ -15,6 +15,7 @@
   justify-content: center;
   gap: 20px;
   width: 80%;
+  max-width: 550px;
   margin: 0 auto 40px auto;
   height: 200px;
 }
@@ -89,4 +90,15 @@
   width: 13.12rem;
   height: 13.12rem;
   border-radius: 50%;
+}
+
+@media (min-width: 1000px) {
+  .main_home {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .div_home {
+    margin: 0;
+  }
 }
