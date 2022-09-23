@@ -1,0 +1,47 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.header_list {
+  display: flex;
+  height: 50px;
+  padding: 5px;
+  width: 85%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto 10px auto;
+}
+
+.header_list h2 {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-title-2);
+}
+
+.btn_filtro {
+  display: flex;
+  width: 80%;
+  gap: 10px;
+}
+
+.btn_filtro button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-2);
+  font-weight: var(--fontWei-title-4);
+  color: var(--grey-2);
+  width: 70px;
+  border-radius: 0.4rem;
+  background-color: var(--grey-6);
+  border: 1px solid transparent;
+}
+
+.container_card {
+  border: 1px solid #87848140;
+  padding: 15px;
+  width: 83%;
+  margin: 0 auto;
+}

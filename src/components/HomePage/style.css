@@ -1,0 +1,92 @@
+.main_home {
+  background: #212529;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.div_home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto 40px auto;
+  height: 200px;
+}
+
+.div_home h2 {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-title-2);
+  font-weight: var(--fontWei-title-1);
+  color: var(--white);
+}
+
+.div_home h2 > span {
+  font-weight: bold;
+  font-family: var(--font-family);
+  color: var(--color-primary);
+}
+
+.div_home h1 {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-title-1);
+  font-weight: var(--fontWei-title-1);
+  color: var(--white);
+}
+
+.div_home p {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-text-1);
+  color: var(--white);
+}
+
+.div_home button {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  color: var(--white);
+  background-color: var(--color-primary);
+}
+
+.ball {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18.75rem;
+  height: 18.75rem;
+  background: #2b2831;
+  border-radius: 50%;
+}
+
+.ball > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16.87rem;
+  height: 16.87rem;
+  background: #342b39;
+  border-radius: 50%;
+}
+
+.ball > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 15rem;
+  background: #3d2e40;
+  border-radius: 50%;
+}
+
+.ball > div > div > img {
+  width: 13.12rem;
+  height: 13.12rem;
+  border-radius: 50%;
+}

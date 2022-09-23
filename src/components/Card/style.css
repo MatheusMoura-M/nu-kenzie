@@ -1,0 +1,51 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--grey-6);
+  padding: 10px;
+  margin: 0 auto 10px auto;
+  gap: 10px;
+  width: 90%;
+  height: 80px;
+  border-radius: 0.4rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  height: 90%;
+}
+
+.description h3 {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-title-1);
+}
+
+.description span {
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-2);
+  font-weight: var(--fontWei-text-1);
+}
+
+.box-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  width: 40%;
+  height: 25px;
+}
+
+.card img {
+  width: 15px;
+  height: 15px;
+}

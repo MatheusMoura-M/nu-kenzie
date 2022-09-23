@@ -1,0 +1,12 @@
+#root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.App {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}

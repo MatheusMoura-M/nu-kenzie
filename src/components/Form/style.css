@@ -1,0 +1,195 @@
+.section_form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 35px auto 0 auto;
+  gap: 25px;
+  padding: 15px;
+  border: 1px solid #87848140;
+}
+
+.box-inputValue {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form button {
+  margin: 15px auto 0 auto;
+  width: 90%;
+  height: 35px;
+  border: none;
+  color: var(--white);
+  background-color: var(--color-primary);
+}
+
+.label-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  padding-top: 13px;
+}
+
+.label-description input {
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.label-description span {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-2);
+  font-weight: var(--fontWei-text-2);
+}
+
+.label-description input:focus {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.label-description label {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-text-1);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+
+.label-description input:focus + label,
+.label-description input:not(:placeholder-shown) + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.label-value {
+  display: flex;
+  gap: 10px;
+  width: 35%;
+  position: relative;
+  padding-top: 13px;
+}
+
+.label-value input {
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  outline: none;
+  min-width: 90%;
+  font-size: 14px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.label-value span {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-2);
+  font-weight: var(--fontWei-text-2);
+}
+
+.label-value input:focus {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.label-value label {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-text-1);
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+
+.label-value input:focus + label,
+.label-value input:not(:placeholder-shown) + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.box-inputValue > .box-select {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.box-inputValue > .box-select > h3 {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-text-1);
+}
+
+.box-inputValue > .box-select > select {
+  height: 30px;
+  border: 1px solid var(--color-primary-2);
+  border-radius: 0.4rem;
+  background-color: var(--grey-6);
+}
+
+.amount {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 35px auto;
+  gap: 25px;
+  padding: 15px;
+  border: 1px solid #87848140;
+}
+
+.amount div {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.amount div h2 {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-text-1);
+}
+
+.amount div p {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-text-1);
+}
+
+.amount span {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-2);
+  font-weight: var(--fontWei-text-2);
+}
