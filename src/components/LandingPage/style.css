@@ -1,7 +1,6 @@
 .main_landing {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -41,7 +40,17 @@
   border: 1px solid transparent;
   border-radius: 0.6rem;
   color: var(--grey-2);
-  background-color: var(--grey-5);
+  background-color: var(--color-primary);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.5s,
+    color 0.5s;
+}
+
+.cabecalho > button:hover {
+  border-color: var(--color-primary);
+  box-shadow: 2px 2px 0 0.5px #a01d4b;
+  background-color: var(--color-primary-2);
+  color: var(--grey-6);
+  transform: scale(1.08);
 }
 
 @media (min-width: 1000px) {

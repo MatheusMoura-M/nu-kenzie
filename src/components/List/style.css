@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   min-width: 400px;
+  margin-bottom: 25px;
 }
 
 .header_list {
@@ -38,9 +39,27 @@
   border-radius: 0.4rem;
   background-color: var(--grey-6);
   border: 1px solid transparent;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.5s,
+    color 0.5s;
+}
+
+.btn_filtro button:hover {
+  border-color: var(--color-primary);
+  box-shadow: 2px 2px 0 0.5px #a01d4b;
+  background-color: var(--color-primary-2);
+  color: var(--grey-6);
+  transform: scale(1.08);
+}
+
+.btn_filtro button:active {
+  box-shadow: 0 0 0 0, inset 2px 2px 2px 0.5px #a01d4b;
+  transform: translate(2px, 2px);
 }
 
 .container_card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   border: 1px solid #87848140;
   padding: 15px;
   width: 83%;
@@ -50,6 +69,7 @@
 
 .btn_filtro .btn-color {
   background: var(--color-primary);
+  border: 0;
 }
 
 @media (min-width: 1000px) {

@@ -17,14 +17,13 @@ export const HomePage = ({ setIsLoggedIn }) => {
       </div>
 
       <div className="ball">
-        <div>
-          <div>
-            <img
-              src="https://img.freepik.com/vetores-gratis/documentacao-eletronica-homem-com-registro-verificando-o-log-do-repositorio-aprovacao-online-formulario-de-tela-pagina-de-validacao-cronicas-de-despesas-ilustracao-isolada-da-metafora-do-conceito_335657-1222.jpg"
-              alt=""
-            />
-          </div>
-        </div>
+        <img src="../../../public/assets/Ellipse 1.svg" alt="ball-1" />
+        <img src="../../../public/assets/Ellipse 2.svg" alt="ball-2" />
+        <img src="../../../public/assets/Ellipse 3.svg" alt="ball-3" />
+        <img
+          src="https://img.freepik.com/vetores-gratis/documentacao-eletronica-homem-com-registro-verificando-o-log-do-repositorio-aprovacao-online-formulario-de-tela-pagina-de-validacao-cronicas-de-despesas-ilustracao-isolada-da-metafora-do-conceito_335657-1222.jpg"
+          alt="financas"
+        />
       </div>
     </main>
   );

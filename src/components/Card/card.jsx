@@ -1,4 +1,5 @@
 import "./style.css";
+import { FaTrash } from "react-icons/fa";
 
 export const Card = ({
   transaction,
@@ -12,6 +13,7 @@ export const Card = ({
     );
     setListTransactions(filtered);
   };
+
   return transaction.type === "Entrada" ? (
     <li className="card" id="li_entrada">
       <div className="description">
@@ -20,12 +22,10 @@ export const Card = ({
       </div>
       <div className="box-price">
         <p>R$ {transaction.value}</p>
-        <img
+        <FaTrash
           id={transaction.id}
           onClick={(event) => deleted(event, transaction)}
           className="lixeira"
-          src="../../../public/assets/trash.svg"
-          alt=""
         />
       </div>
     </li>
@@ -37,12 +37,10 @@ export const Card = ({
       </div>
       <div className="box-price">
         <p>R$ {transaction.value}</p>
-        <img
+        <FaTrash
           id={transaction.id}
           onClick={(event) => deleted(event, transaction)}
           className="lixeira"
-          src="../../../public/assets/trash.svg"
-          alt=""
         />
       </div>
     </li>

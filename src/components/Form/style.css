@@ -1,7 +1,6 @@
 .section_form {
   display: flex;
   flex-direction: column;
-  margin: 60px 0 20px 0;
   align-items: center;
   min-width: 400px;
   max-width: 600px;
@@ -30,8 +29,18 @@
   width: 90%;
   height: 35px;
   border: none;
-  color: var(--white);
+  color: var(--grey-2);
   background-color: var(--color-primary);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.5s,
+    color 0.5s;
+}
+
+.form button:hover {
+  border-color: var(--color-primary);
+  box-shadow: 2px 2px 0 0.5px #a01d4b;
+  background-color: var(--color-primary-2);
+  color: var(--grey-6);
+  transform: scale(1.01);
 }
 
 .label-description {
