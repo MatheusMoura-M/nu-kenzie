@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1050px;
   margin: 0 auto;
-  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -14,20 +13,18 @@
   justify-content: space-between;
   width: 100%;
   height: 45px;
+  box-shadow: 0 4px 32px -12px rgb(0 0 0 / 50%);
 }
 
-.cabecalho > h2 {
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 10%;
-  font-family: var(--font-family);
-  font-size: var(--fontSize-title-2);
-  font-weight: var(--fontWei-title-1);
-  color: var(--black);
 }
 
-.cabecalho > h2 > span {
-  font-weight: bold;
-  font-family: var(--font-family);
-  color: var(--color-primary);
+.logo img {
+  max-width: 100%;
 }
 
 .cabecalho > button {
@@ -39,18 +36,28 @@
   margin-right: 10%;
   border: 1px solid transparent;
   border-radius: 0.6rem;
-  color: var(--grey-2);
+  color: var(--grey-6);
   background-color: var(--color-primary);
-  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.5s,
-    color 0.5s;
+  transition: transform 0.3s ease, background-color 0.5s, color 0.5s;
 }
 
 .cabecalho > button:hover {
   border-color: var(--color-primary);
-  box-shadow: 2px 2px 0 0.5px #a01d4b;
   background-color: var(--color-primary-2);
   color: var(--grey-6);
-  transform: scale(1.08);
+  animation: vibrar 0.5s linear infinite;
+}
+
+@keyframes vibrar {
+  0% {
+    transform: rotateZ(-2deg);
+  }
+  50% {
+    transform: rotateZ(2deg);
+  }
+  100% {
+    transform: rotateZ(-2deg);
+  }
 }
 
 @media (min-width: 1000px) {

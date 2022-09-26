@@ -29,7 +29,7 @@
   width: 90%;
   height: 35px;
   border: none;
-  color: var(--grey-2);
+  color: var(--grey-6);
   background-color: var(--color-primary);
   transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.5s,
     color 0.5s;
@@ -41,6 +41,11 @@
   background-color: var(--color-primary-2);
   color: var(--grey-6);
   transform: scale(1.01);
+}
+
+.form button:active {
+  box-shadow: 0 0 0 0, inset 2px 2px 2px 0.5px #a01d4b;
+  transform: translate(2px, 2px);
 }
 
 .label-description {
@@ -171,7 +176,8 @@
 
 @media (min-width: 1000px) {
   .section_form {
-    min-width: 500px;
-    max-width: 700px;
+    min-width: 400px;
+    max-width: 450px;
+    margin-top: 50px;
   }
 }

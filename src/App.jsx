@@ -6,15 +6,7 @@ import { LandingPage } from "./components/LandingPage/landing";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [listTransactions, setListTransactions] = useState([
-    // {
-    //   id: 22,
-    //   description: "Salário recebido",
-    //   type: "Entrada",
-    //   value: 2500,
-    // },
-    // { id: 1, description: "Conta de luz", type: "Despesa", value: -150 },
-  ]);
+  const [listTransactions, setListTransactions] = useState([]);
 
   return (
     <div className="App">

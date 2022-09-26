@@ -4,22 +4,38 @@ import "./style.css";
 import { v4 as uuidv4 } from "uuid";
 
 export const Form = ({ listTransactions, setListTransactions }) => {
-  const [inputDescription, SetInputDescription] = useState("");
-  const [inputValue, SetInputValue] = useState("");
-  const [selectTipo, SetSelectTipo] = useState("");
+  const [inputDescription, setInputDescription] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [selectTipo, setSelectTipo] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const selectVazio =
+      event.target.children[1].children[1].children[1].children[0];
 
-    setListTransactions([
-      ...listTransactions,
-      {
-        id: uuidv4(),
-        description: inputDescription,
-        type: selectTipo,
-        value: inputValue,
-      },
-    ]);
+    selectTipo === "Entrada"
+      ? setListTransactions([
+          ...listTransactions,
+          {
+            id: uuidv4(),
+            description: inputDescription,
+            type: selectTipo,
+            value: inputValue,
+          },
+        ])
+      : setListTransactions([
+          ...listTransactions,
+          {
+            id: uuidv4(),
+            description: inputDescription,
+            type: selectTipo,
+            value: inputValue * -1,
+          },
+        ]);
+
+    setInputDescription("");
+    setInputValue("");
+    setSelectTipo(selectVazio);
   };
 
   return (
@@ -29,10 +45,11 @@ export const Form = ({ listTransactions, setListTransactions }) => {
           <input
             type="text"
             id="inputDescription"
-            placeholder=" "
+            value={inputDescription}
             onChange={(event) => {
-              SetInputDescription(event.target.value);
+              setInputDescription(event.target.value);
             }}
+            required
           />
           <label className="labelDescription">Descrição:</label>
           <span>Ex: Compra de roupas</span>
@@ -41,10 +58,11 @@ export const Form = ({ listTransactions, setListTransactions }) => {
           <div className="label-value">
             <input
               type="number"
-              placeholder=" "
+              value={inputValue}
               onChange={(event) => {
-                SetInputValue(+event.target.value);
+                setInputValue(+event.target.value);
               }}
+              required
             />
             <label>Valor:</label>
             <p>R$</p>
@@ -52,9 +70,11 @@ export const Form = ({ listTransactions, setListTransactions }) => {
           <div className="box-select">
             <h3>Tipo de valor:</h3>
             <select
+              value={selectTipo}
               onChange={(event) => {
-                SetSelectTipo(event.target.value);
+                setSelectTipo(event.target.value);
               }}
+              required
             >
               <option value=""></option>
               <option value="Entrada">Entrada</option>

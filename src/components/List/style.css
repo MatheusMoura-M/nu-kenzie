@@ -1,7 +1,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  min-width: 400px;
+  max-width: 400px;
   margin-bottom: 25px;
 }
 
@@ -19,6 +19,7 @@
   font-family: var(--font-family);
   font-size: var(--fontSize-text-1);
   font-weight: var(--fontWei-title-2);
+  width: 40%;
 }
 
 .btn_filtro {
@@ -44,7 +45,7 @@
 }
 
 .btn_filtro button:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-2);
   box-shadow: 2px 2px 0 0.5px #a01d4b;
   background-color: var(--color-primary-2);
   color: var(--grey-6);
@@ -69,11 +70,31 @@
 
 .btn_filtro .btn-color {
   background: var(--color-primary);
-  border: 0;
+  color: var(--grey-6);
+}
+
+.carrinhoVazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+}
+
+.carrinhoVazio h2 {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: var(--fontWei-title-2);
+}
+
+.carrinhoVazio img {
+  max-width: 85%;
 }
 
 @media (min-width: 1000px) {
   .list {
-    margin: 75px 0 0 0;
+    min-width: 600px;
+    margin: 65px 0 0 0;
   }
 }

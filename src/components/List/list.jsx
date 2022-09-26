@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card } from "../Card/card";
 import "./style.css";
+import carrinhoVazio from "../../../public/assets/NoCard.svg";
 
 export const List = ({ listTransactions, setListTransactions }) => {
   const [filter, setFilter] = useState("todos");
@@ -51,16 +52,7 @@ export const List = ({ listTransactions, setListTransactions }) => {
       {listTransactions.length !== 0 ? (
         <ul className="container_card">
           {listTransactions.map((transaction, index) => {
-            if (filter === "todos") {
-              return (
-                <Card
-                  listTransactions={listTransactions}
-                  setListTransactions={setListTransactions}
-                  key={index}
-                  transaction={transaction}
-                />
-              );
-            } else if (filter === transaction.type) {
+            if (filter === "todos" || filter === transaction.type) {
               return (
                 <Card
                   listTransactions={listTransactions}
@@ -73,8 +65,9 @@ export const List = ({ listTransactions, setListTransactions }) => {
           })}
         </ul>
       ) : (
-        <div>
+        <div className="carrinhoVazio">
           <h2>Você ainda não possui nenhum lançamento</h2>
+          <img src={carrinhoVazio} alt="" />
         </div>
       )}
     </section>
