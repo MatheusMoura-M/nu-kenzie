@@ -28,35 +28,6 @@
   gap: 10px;
 }
 
-.btn_filtro button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family);
-  font-size: var(--fontSize-text-2);
-  font-weight: var(--fontWei-title-4);
-  color: var(--grey-2);
-  width: 70px;
-  border-radius: 0.4rem;
-  background-color: var(--grey-6);
-  border: 1px solid transparent;
-  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.5s,
-    color 0.5s;
-}
-
-.btn_filtro button:hover {
-  border-color: var(--color-primary-2);
-  box-shadow: 2px 2px 0 0.5px #a01d4b;
-  background-color: var(--color-primary-2);
-  color: var(--grey-6);
-  transform: scale(1.08);
-}
-
-.btn_filtro button:active {
-  box-shadow: 0 0 0 0, inset 2px 2px 2px 0.5px #a01d4b;
-  transform: translate(2px, 2px);
-}
-
 .container_card {
   display: flex;
   flex-direction: column;
@@ -66,11 +37,6 @@
   width: 83%;
   margin: 0 auto;
   border-radius: 0.4rem;
-}
-
-.btn_filtro .btn-color {
-  background: var(--color-primary);
-  color: var(--grey-6);
 }
 
 .carrinhoVazio {
