@@ -17,14 +17,14 @@ export const BtnAll = styled.button`
 
   :hover {
     border-color: var(--color-primary-2);
-    box-shadow: 2px 2px 0 0.5px #a01d4b;
+    box-shadow: 2px 2px 0 0.5px #550f4f;
     background-color: var(--color-primary-2);
     color: var(--grey-6);
     transform: scale(1.08);
   }
 
   :active {
-    box-shadow: 0 0 0 0, inset 2px 2px 2px 0.5px #a01d4b;
+    box-shadow: 0 0 0 0, inset 2px 2px 2px 0.5px #550f4f;
     transform: translate(2px, 2px);
   }
 `;

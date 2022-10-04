@@ -1,19 +1,32 @@
 .main_landing {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
   align-items: center;
+  justify-content: space-evenly;
+
+  width: 100%;
+
+  margin: 0 auto;
+
+  background: #660b668c;
 }
 
 .cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+
+  min-width: 100%;
   height: 45px;
-  box-shadow: 0 4px 32px -12px rgb(0 0 0 / 50%);
+
+  box-shadow: 0 20px 32px 1px var(--color-primary);
+  background: #f7f7f7;
+
 }
 
 .logo {
@@ -23,21 +36,42 @@
   margin-left: 10%;
 }
 
-.logo img {
-  max-width: 100%;
+.logo h2{
+  font-family: var(--font-family);
+  font-size: var(--fontSize-title-2);
+  font-weight: var(--fontWei-title-2);
+  letter-spacing: -1px;
+  color: var(--color-primary);
+}
+
+.logo span{
+  font-family: var(--font-family);
+  font-size: var(--fontSize-title-2);
+  font-weight: var(--fontWei-title-2);
+  letter-spacing: -1px;
+  color: var(--grey-2);
 }
 
 .cabecalho > button {
+  font-family: var(--font-family);
+  font-size: var(--fontSize-text-1);
+  font-weight: 600;
+  line-height: var(--lineHei-text-2);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 4.5rem;
   height: 32px;
+
   margin-right: 10%;
+
   border: 1px solid transparent;
   border-radius: 0.6rem;
-  color: var(--grey-6);
-  background-color: var(--color-primary);
+  color: var(--grey-1);
+  background-color: #c262d3;
+
   transition: transform 0.3s ease, background-color 0.5s, color 0.5s;
 }
 
@@ -45,6 +79,7 @@
   border-color: var(--color-primary);
   background-color: var(--color-primary-2);
   color: var(--grey-6);
+
   animation: vibrar 0.5s linear infinite;
 }
 
@@ -64,5 +99,29 @@
   .main_landing {
     flex-direction: row;
     align-items: unset;
+    height: 93%;
+  }
+  .cabecalho{
+    position: static;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main_landing{
+    margin: 45px auto 0;
+   }
+}
+
+@media (max-width: 522px) {
+  .cabecalho{
+    justify-content: space-around;
+  }
+
+  .logo{
+    margin: 0;
+  }
+
+  .cabecalho > button{
+    margin: 0;
   }
 }

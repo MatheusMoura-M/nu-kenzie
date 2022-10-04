@@ -2,13 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f8f9fa;
+  gap: 10px;
+
+  min-height: 80px;
+  width: 90%;
+  
   padding: 10px;
   margin: 0 auto 10px auto;
-  gap: 10px;
-  width: 90%;
-  height: 80px;
+  
+  background-color: var(--color-primary);
   border-radius: 0.4rem;
+  color: var(--white);
 }
 
 #li_entrada {
@@ -20,12 +24,14 @@
 }
 
 .description {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+
   width: 50%;
-  height: 90%;
+  min-height: 80px;
 }
 
 .description h3 {
@@ -36,8 +42,10 @@
 
 .description span {
   position: absolute;
+
   bottom: 0;
   left: 2px;
+
   font-family: var(--font-family);
   font-size: var(--fontSize-text-2);
   font-weight: var(--fontWei-text-1);
@@ -48,7 +56,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
   text-align: center;
+
   width: 40%;
   height: 25px;
 }
@@ -57,14 +67,29 @@
   background: #f8f9fa;
   border: 1px solid transparent;
   border-radius: 0.3rem;
+  color: var(--grey-3);
+
   padding: 2px;
+
   width: 15px;
   height: 15px;
+
   transition: transform 0.5s ease, background-color 0.7s, color 0.5s;
 }
 
 .lixeira:hover {
   background-color: var(--grey-2);
   color: var(--grey-6);
+
   transform: scale(1.2);
+}
+
+.lixeira:active {
+  transform: perspective(500px) translate(2px, 2px) ;
+}
+
+@media (max-width: 1000px){
+  .card{
+    width: 93%
+  }
 }

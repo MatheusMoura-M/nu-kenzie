@@ -46,6 +46,7 @@ export const Form = ({ listTransactions, setListTransactions }) => {
             type="text"
             id="inputDescription"
             value={inputDescription}
+            placeholder="Digite"
             onChange={(event) => {
               setInputDescription(event.target.value);
             }}
@@ -59,6 +60,7 @@ export const Form = ({ listTransactions, setListTransactions }) => {
             <input
               type="number"
               value={inputValue}
+              placeholder="Digite"
               onChange={(event) => {
                 setInputValue(+event.target.value);
               }}

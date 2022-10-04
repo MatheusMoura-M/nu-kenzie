@@ -21,7 +21,7 @@ export const Card = ({
         <span>{transaction.type}</span>
       </div>
       <div className="box-price">
-        <p>R$ {transaction.value}</p>
+        <p>{`R$ ${transaction.value},00`}</p>
         <FaTrash
           id={transaction.id}
           onClick={(event) => deleted(event, transaction)}
@@ -36,7 +36,7 @@ export const Card = ({
         <span>{transaction.type}</span>
       </div>
       <div className="box-price">
-        <p>R$ {transaction.value}</p>
+        <p>{`R$ ${transaction.value},00`}</p>
         <FaTrash
           id={transaction.id}
           onClick={(event) => deleted(event, transaction)}

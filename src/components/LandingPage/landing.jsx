@@ -14,16 +14,17 @@ export const LandingPage = ({
   };
 
   return (
-    <motion.div
-      className="box"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.7 }}
-    >
+    // <motion.div
+    //   className="box"
+    //   initial={{ opacity: 0 }}
+    //   animate={{ opacity: 1 }}
+    //   transition={{ duration: 0.7 }}
+    // >
       <>
         <header className="cabecalho">
           <figure className="logo">
-            <img src={logoTitle} alt="Logo NuKenzie" />
+            {/* <img src={logoTitle} alt="Logo NuKenzie" /> */}
+            <h2>Nu <span>Kenzie</span></h2>
           </figure>
           <button onClick={Logout}>Iniciar</button>
         </header>
@@ -38,6 +39,6 @@ export const LandingPage = ({
           />
         </main>
       </>
-    </motion.div>
+    // </motion.div>
   );
 };
